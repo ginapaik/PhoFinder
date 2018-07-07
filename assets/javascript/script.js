@@ -1,4 +1,3 @@
-
 $(document).ready(function(){  
   $('#gifPage').hide();
   $("#landingpage").hide();
@@ -38,13 +37,15 @@ function showPosition(position) {
         console.log(response);
         console.log(queryURL);
 
+
+       
           var i = 0;
           var restaurants = [];
 
         for (i = 0; i < 10; i++) {
             var imgURL = response.results[i].photos["0"].photo_reference;
 
-
+            
               var imageRef = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=" + response.results[i].photos["0"].photo_reference + "&key=YOUR API KEY";
 
               console.log(imageRef);
@@ -57,6 +58,8 @@ function showPosition(position) {
                                 "<br><img src='" + imageRef + "'/></div><br><br><br>";
 
                             
+
+
             $("#restaurantcards").html(restaurants);
           //  $("#restaurantcards").append(image);
 
@@ -69,7 +72,7 @@ function showPosition(position) {
         
           
   
-      var queryURL = "https://api.giphy.com/v1/gifs/search?q=pho&api_key=YOUR API KEY=1";
+      var queryURL = "https://api.giphy.com/v1/gifs/search?q=pho&api_key=YOUR API KEY&limit=1";
         
             $.ajax({
               url: queryURL,
