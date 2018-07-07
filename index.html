@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+ <meta charset="UTF-8">
+ <title>Pho Finder</title>
+ <!-- Bootstrap -->
+ <!-- add a favicon! -->
+ <link rel="stylesheet" href="assets/css/reset.css">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+ <link rel="stylesheet" href="assets/css/style.css">
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+ <!-- Firebase Reference -->
+ <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+
+</head>
+<body>
+<!-- blank row above -->
+  <div id="mainpage">
+    <div class="row">
+      <div class="col-md-12"></div>
+    </div>
+      <div class="row">
+        <div class="col-md-12"></div>
+      </div>
+    <div class="row">
+          <div class="col-md-3"></div>
+      <!-- blank spacer column -->
+      <div class="col-md-6">
+        <div class="mainHeader"><img src="../Pho-Finder/assets/images/phoLogo.png" height="400px" width="600px"></div>
+        <div class="mainContainer">
+        <button type="button" onclick="getLocation()" class="btn btn-location btn-lg btn3d"><span class="glyphicon glyphicon-warning-sign"></span>&hearts;Find Near You&hearts;</button>
+
+        </div>
+      </div>
+      <!-- blank spacer column -->
+      <div class="col-md-3"></div>
+    </div>
+    <br>
+    <!-- blank row below -->
+      <div class="row">
+        <div class="col-md-6" id="mapholder"></div>
+        <div class="col-md-6"></div>
+      </div>
+            <div class="col-md-3"></div>
+        <!-- blank spacer column -->
+        <!-- blank spacer column -->
+        <div class="col-md-3"></div>
+    </div>
+    <!-- blank row below -->
+        <div class="row">
+          <div class="col-md-12"></div>
+        </div>
+        <div id="pho"></div>
+        <div id="map"></div>
+      </div>
+
+    <div class="container" id="landingpage">
+      <div class="row"> <!-- this is the overall row div -->
+        <div class="col-md-3">
+          &nbsp;
+        </div>
+      <div class="row">
+        <div class="col-md-6"> <!-- for six columns -->
+          <div id="bigSection">
+            <div id="restaurantcards"></div>
+            <div id="restaurantpics"></div>
+          </div>
+        </div> <!-- for six columns -->
+      <div class="col-md-3">
+        &nbsp;
+      </div>
+    </div>
+    </div> <!-- this is the overall row div -->
+  </div><!-- this is the container landing page div -->
+
+  <div id="gifPage">
+    <h3>It's Pho-King Time!</h3>
+    <div id="gifs"></div>
+  </div>
+
+
+    <!-- JavaScript -->
+<script src="assets/javascript/script.js"></script>
+</body>
+</html>
